@@ -6,54 +6,55 @@
 
 @layer base {
   :root {
-    /* RightHer design system — elegant lavender / deep purple / ivory / soft gold */
-    --background: 280 40% 99%;
-    --foreground: 270 35% 12%;
+    /* RightHer design system — pink & white themed */
+    --background: 340 60% 99%;
+    --foreground: 340 35% 14%;
 
     --card: 0 0% 100%;
-    --card-foreground: 270 35% 12%;
+    --card-foreground: 340 35% 14%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 270 35% 12%;
+    --popover-foreground: 340 35% 14%;
 
-    /* Deep purple */
-    --primary: 270 55% 28%;
-    --primary-foreground: 280 40% 99%;
-    --primary-glow: 270 60% 55%;
+    /* Deep rose pink */
+    --primary: 340 70% 42%;
+    --primary-foreground: 340 60% 99%;
+    --primary-glow: 340 75% 65%;
 
-    /* Lavender */
-    --secondary: 270 60% 94%;
-    --secondary-foreground: 270 55% 28%;
+    /* Soft blush pink */
+    --secondary: 340 70% 95%;
+    --secondary-foreground: 340 70% 35%;
 
-    --muted: 270 30% 96%;
-    --muted-foreground: 270 12% 42%;
+    --muted: 340 40% 97%;
+    --muted-foreground: 340 12% 44%;
 
-    /* Soft gold accent */
-    --accent: 42 60% 62%;
-    --accent-foreground: 270 55% 18%;
+    /* Warm rose-gold accent */
+    --accent: 350 75% 78%;
+    --accent-foreground: 340 60% 22%;
 
     --destructive: 0 70% 50%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 270 30% 90%;
-    --input: 270 30% 90%;
-    --ring: 270 55% 45%;
+    --border: 340 40% 92%;
+    --input: 340 40% 92%;
+    --ring: 340 70% 55%;
 
     --radius: 0.75rem;
 
     /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(270 60% 96%) 0%, hsl(280 50% 92%) 50%, hsl(42 70% 92%) 100%);
-    --gradient-primary: linear-gradient(135deg, hsl(270 55% 28%), hsl(270 60% 45%));
-    --gradient-gold: linear-gradient(135deg, hsl(42 70% 70%), hsl(38 60% 55%));
-    --gradient-soft: linear-gradient(180deg, hsl(280 40% 99%), hsl(270 50% 96%));
+    --gradient-hero: linear-gradient(135deg, hsl(340 70% 97%) 0%, hsl(345 80% 94%) 50%, hsl(350 70% 92%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(340 70% 42%), hsl(340 75% 60%));
+    --gradient-gold: linear-gradient(135deg, hsl(350 80% 82%), hsl(340 70% 70%));
+    --gradient-soft: linear-gradient(180deg, hsl(340 60% 99%), hsl(340 70% 97%));
 
     /* Shadows */
-    --shadow-soft: 0 4px 24px -8px hsl(270 50% 40% / 0.12);
-    --shadow-elegant: 0 20px 60px -20px hsl(270 55% 28% / 0.25);
-    --shadow-gold: 0 8px 32px -12px hsl(42 70% 50% / 0.35);
+    --shadow-soft: 0 4px 24px -8px hsl(340 60% 50% / 0.12);
+    --shadow-elegant: 0 20px 60px -20px hsl(340 70% 42% / 0.22);
+    --shadow-gold: 0 8px 32px -12px hsl(345 70% 60% / 0.30);
 
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   }
+
 }
 
 @layer base {
