@@ -6,6 +6,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { Layout } from "@/components/Layout";
 import Home from "./pages/Home";
 import Blog from "./pages/Blog";
+import Article from "./pages/Article";
 import About from "./pages/About";
 import Resources from "./pages/Resources";
 import Contact from "./pages/Contact";
@@ -23,6 +24,7 @@ const App = () => (
           <Route element={<Layout />}>
             <Route path="/" element={<Home />} />
             <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:slug" element={<Article />} />
             <Route path="/about" element={<About />} />
             <Route path="/resources" element={<Resources />} />
             <Route path="/contact" element={<Contact />} />
