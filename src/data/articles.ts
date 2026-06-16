@@ -114,4 +114,88 @@ export const articles: Article[] = [
       },
     ],
   },
+  {
+    slug: "student-privacy-and-school-phone-access",
+    title: "Understanding the Boundaries of Student Privacy and School Access to Phone Information",
+    excerpt:
+      "Smartphones are part of every step of a student's routine — but where should schools draw the line between safety, discipline, and privacy?",
+    category: "Women's Rights",
+    tags: ["Privacy", "Student Rights", "Schools", "Digital"],
+    image: article2,
+    date: "June 16, 2026",
+    readTime: "6 min read",
+    author: "The RightHer Editors",
+    featured: true,
+    content: [
+      {
+        type: "p",
+        text: "In today's digital age, smartphones have become an essential part of students' lives. These devices have a place in every step of their routines, from communicating with loved ones to capturing memories. However, when it comes to schools accessing information on these devices, the lines between safety, discipline, and privacy can start to blur. Understanding the limits of what schools can and cannot do regarding student phone information is crucial for students, parents, and educators alike to ensure the privacy of the student and the integrity of the school.",
+      },
+      { type: "h2", text: "Why Schools Might Want Access to Student Phone Information" },
+      {
+        type: "p",
+        text: "Schools often face challenges related to student safety and discipline. Accessing phone information can help address issues such as:",
+      },
+      {
+        type: "ul",
+        items: [
+          "Bullying or harassment: Certain digital messages or social media posts can sometimes involve harmful behavior, leading to further investigation by school officials.",
+          "Cheating during exams: Phones can be used to share answers or access unauthorized information, which directly violates many schools' policies.",
+          "Threats or safety concerns: Certain messages or images may indicate potential risks to students or staff.",
+        ],
+      },
+      {
+        type: "p",
+        text: "While these reasons are valid, schools must balance their responsibility to maintain a safe environment with respecting students' privacy rights.",
+      },
+      { type: "h2", text: "Legal Framework Governing School Access" },
+      {
+        type: "p",
+        text: "The rules about school access to student phone information vary by country and state, but some common principles apply:",
+      },
+      {
+        type: "ul",
+        items: [
+          "Reasonable suspicion: Schools generally need a valid reason to search a student's phone, such as suspicion of rule-breaking or safety threats.",
+          "Scope of search: Searches should be limited to relevant information and not be overly intrusive.",
+          "Consent: In some cases, schools require parental consent before accessing a student's device.",
+          "Riley v. California: In this case, the court ruled that it was unlawful for law enforcement to seize the digital contents of a phone without a warrant.",
+        ],
+      },
+      { type: "h2", text: "Practical Examples of School Phone Searches" },
+      {
+        type: "p",
+        text: "A high school receives reports of cyberbullying targeting a student. The administration asks the student to unlock their phone to review messages related to the incident. Since there is reasonable suspicion, this search is generally considered lawful.",
+      },
+      {
+        type: "p",
+        text: "During an exam, a teacher notices a student using their phone suspiciously. The teacher asks to see the phone, and upon viewing, finds evidence of cheating. This search is limited to the exam context and is justified, as the student has violated school policy.",
+      },
+      { type: "h2", text: "How Students and Parents Can Protect Privacy" },
+      {
+        type: "p",
+        text: "Students and parents can take steps to understand and protect their rights:",
+      },
+      {
+        type: "ul",
+        items: [
+          "Know the school's policy: Review the student handbook or school guidelines on phone use and searches.",
+          "Ask for clarification: If a phone search is requested, ask about the reason and scope.",
+          "Request parental involvement: Parents should be informed and involved when possible.",
+          "Use privacy settings: Limit access to sensitive apps or data.",
+          "Keep backups: Regularly back up important data to avoid loss during searches.",
+        ],
+      },
+      { type: "h2", text: "Balancing Safety and Privacy in a Digital World" },
+      {
+        type: "p",
+        text: "Schools face the challenge of keeping students safe while respecting their privacy. Clear policies, legal guidelines, and mutual respect can help navigate this balance. Understanding the boundaries of phone access ensures that students' rights are protected without compromising school safety.",
+      },
+      {
+        type: "p",
+        text: "Students and parents should stay informed about their rights and school policies. When concerns arise, addressing them calmly and clearly can lead to better outcomes for everyone involved.",
+      },
+    ],
+  },
 ];
+
