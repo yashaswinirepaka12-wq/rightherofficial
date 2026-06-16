@@ -1,7 +1,9 @@
 import { Outlet, Link, NavLink, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { Menu, X, Instagram, Mail, Sparkles } from "lucide-react";
+import { Menu, X, Instagram, Mail } from "lucide-react";
 import { cn } from "@/lib/utils";
+import logoAsset from "@/assets/righther-logo.png.asset.json";
+
 
 const navItems = [
   { to: "/", label: "Home" },
@@ -24,14 +26,17 @@ export function Layout() {
     <div className="min-h-screen flex flex-col bg-background">
       <header className="sticky top-0 z-50 backdrop-blur-md bg-background/80 border-b border-border/60">
         <div className="container flex items-center justify-between h-16 md:h-20">
-          <Link to="/" className="flex items-center gap-2 group">
-            <span className="grid place-items-center w-9 h-9 rounded-full bg-primary-gradient text-primary-foreground shadow-soft">
-              <Sparkles className="w-4 h-4" />
-            </span>
-            <span className="font-display text-2xl font-semibold tracking-tight">
-              Right<span className="text-gradient">Her</span>
-            </span>
+          <Link to="/" className="flex items-center gap-2 group" aria-label="RightHer home">
+            <img
+              src={logoAsset.url}
+              alt="RightHer logo"
+              className="h-12 md:h-14 w-auto"
+              width={160}
+              height={160}
+            />
+            <span className="sr-only">RightHer — Legal Rights Blog</span>
           </Link>
+
 
           <nav className="hidden md:flex items-center gap-1">
             {navItems.map((item) => (
@@ -99,16 +104,22 @@ export function Layout() {
       <footer className="mt-24 border-t border-border/60 bg-soft-gradient">
         <div className="container py-14 grid md:grid-cols-3 gap-10">
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <span className="grid place-items-center w-8 h-8 rounded-full bg-primary-gradient text-primary-foreground">
-                <Sparkles className="w-3.5 h-3.5" />
-              </span>
+            <div className="flex items-center gap-3 mb-4">
+              <img
+                src={logoAsset.url}
+                alt="RightHer logo"
+                className="h-12 w-auto"
+                width={120}
+                height={120}
+                loading="lazy"
+              />
               <span className="font-display text-xl font-semibold">RightHer</span>
             </div>
             <p className="text-sm text-muted-foreground max-w-xs leading-relaxed">
-              A student-led blog empowering young women to find their voice — and use it.
+              A student-led legal rights blog empowering young women to find their voice — and use it.
             </p>
           </div>
+
           <div>
             <h4 className="text-sm font-semibold tracking-wider uppercase text-primary mb-4">Explore</h4>
             <ul className="space-y-2 text-sm">
