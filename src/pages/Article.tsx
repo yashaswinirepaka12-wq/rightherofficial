@@ -63,11 +63,43 @@ export default function Article() {
         </div>
 
         <div className="container max-w-3xl">
-          <div className="prose-content space-y-6 text-lg leading-relaxed text-foreground/90">
-            {article.content.map((p, i) => (
-              <p key={i}>{p}</p>
-            ))}
+          <div className="space-y-6 text-lg leading-relaxed text-foreground/90">
+            {article.content.map((block, i) => {
+              if (block.type === "h2") {
+                return (
+                  <h2
+                    key={i}
+                    className="font-display text-2xl md:text-3xl font-semibold text-foreground pt-4"
+                  >
+                    {block.text}
+                  </h2>
+                );
+              }
+              if (block.type === "ul") {
+                return (
+                  <ul key={i} className="list-disc pl-6 space-y-3 marker:text-primary">
+                    {block.items.map((item, j) => (
+                      <li key={j}>{item}</li>
+                    ))}
+                  </ul>
+                );
+              }
+              if (block.type === "sources") {
+                return (
+                  <div key={i} className="pt-6 mt-4 border-t border-border">
+                    <h3 className="font-display text-xl font-semibold mb-4">Sources</h3>
+                    <ul className="space-y-2 text-sm text-muted-foreground">
+                      {block.items.map((item, j) => (
+                        <li key={j}>{item}</li>
+                      ))}
+                    </ul>
+                  </div>
+                );
+              }
+              return <p key={i}>{block.text}</p>;
+            })}
           </div>
+
 
           <div className="flex flex-wrap gap-2 mt-10 pt-8 border-t border-border">
             {article.tags.map((t) => (
