@@ -29,11 +29,11 @@ export default function Home() {
             <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-semibold leading-[1.05] mt-6 mb-6">
               Empowering young women to <span className="text-gradient italic">find their voice</span>.
             </h1>
-            <p className="text-lg text-muted-foreground leading-relaxed max-w-xl mb-8">
+            <p className="text-lg text-muted-foreground leading-relaxed max-w-xl mx-auto mb-8">
               Essays, resources, and real conversations on educational equity, civic engagement,
               mental health, and the rights every young woman deserves to know.
             </p>
-            <div className="flex flex-col sm:flex-row gap-3">
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Button asChild size="lg" className="bg-primary-gradient text-primary-foreground hover:opacity-95 shadow-soft hover:shadow-elegant transition-smooth">
                 <Link to="/blog">Read the blog <ArrowRight className="ml-1 w-4 h-4" /></Link>
               </Button>
