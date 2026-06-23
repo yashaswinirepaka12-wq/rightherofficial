@@ -46,9 +46,10 @@ export default function About() {
               </p>
               <p>{"\n"}</p>
               <p>
-                RightHer is the project I wish I'd had at thirteen. It's a place to read honest
-                writing about the issues that shape our lives, find resources that actually
-                help, and remember that your voice — yes, yours — matters more than you know.
+                I founded RightHer to educate young women on their rights so they can thrive in
+                any atmosphere. This initiative helps build confidence because every girl
+                deserves to be seen and heard. This blog combines my love of writing and
+                ambition to advocate for a voice for women!
               </p>
             </div>
           </div>
