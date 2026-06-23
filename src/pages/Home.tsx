@@ -55,8 +55,8 @@ export default function Home() {
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
             RightHer is a space for honest writing on the things that shape young women's lives —
-            from the classroom to the ballot box to the bathroom. We pair lived experience with
-            real research, so you can show up to your life with confidence.
+            from the classroom to the ballot box. We pair lived experience with
+            real research, so you can show up with confidence every day, all day.
           </p>
         </div>
       </section>
