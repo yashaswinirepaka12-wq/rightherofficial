@@ -20,7 +20,7 @@ export default function Home() {
 
       {/* Hero */}
       <section className="relative overflow-hidden bg-hero-gradient">
-        <div className="container py-16 md:py-28 grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="container py-16 md:py-28 max-w-4xl mx-auto text-center">
           <div className="animate-fade-up">
             <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-card border border-border text-xs font-medium text-primary shadow-soft">
               <Sparkles className="w-3.5 h-3.5 text-accent" />
@@ -29,11 +29,11 @@ export default function Home() {
             <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-semibold leading-[1.05] mt-6 mb-6">
               Empowering young women to <span className="text-gradient italic">find their voice</span>.
             </h1>
-            <p className="text-lg text-muted-foreground leading-relaxed max-w-xl mb-8">
+            <p className="text-lg text-muted-foreground leading-relaxed max-w-xl mx-auto mb-8">
               Essays, resources, and real conversations on educational equity, civic engagement,
               mental health, and the rights every young woman deserves to know.
             </p>
-            <div className="flex flex-col sm:flex-row gap-3">
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Button asChild size="lg" className="bg-primary-gradient text-primary-foreground hover:opacity-95 shadow-soft hover:shadow-elegant transition-smooth">
                 <Link to="/blog">Read the blog <ArrowRight className="ml-1 w-4 h-4" /></Link>
               </Button>
@@ -43,16 +43,6 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="relative animate-fade-in">
-            <div className="absolute -inset-6 bg-gold-gradient rounded-[2.5rem] blur-2xl opacity-30" aria-hidden />
-            <img
-              src={heroImg}
-              alt="Young woman looking upward, surrounded by florals and golden light"
-              width={1600}
-              height={1200}
-              className="relative rounded-[2rem] shadow-elegant w-full h-auto"
-            />
-          </div>
         </div>
       </section>
 
