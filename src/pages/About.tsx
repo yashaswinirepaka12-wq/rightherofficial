@@ -40,9 +40,7 @@ export default function About() {
             <div className="prose prose-lg max-w-none text-muted-foreground leading-relaxed space-y-5">
               <p>
                 I'm a high school student, a debater, a volunteer, and someone who has spent a
-                lot of time in rooms where girls my age weren't being asked what they thought.
-                So I started asking — first my friends, then my classmates, then anyone who
-                would listen.
+                lot of time in rooms where I felt like no one was listening.{" "}
               </p>
               <p>{"\n"}</p>
               <p>
