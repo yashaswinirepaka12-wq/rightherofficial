@@ -49,7 +49,7 @@ export default function About() {
                 I founded RightHer to educate young women on their rights so they can thrive in
                 any atmosphere. This initiative helps build confidence because every girl
                 deserves to be seen and heard. This blog combines my love of writing and
-                ambition to advocate for a voice for women!
+                ambition to advocate for a voice for young women!
               </p>
             </div>
           </div>
