@@ -20,7 +20,7 @@ export default function Home() {
 
       {/* Hero */}
       <section className="relative overflow-hidden bg-hero-gradient">
-        <div className="container py-16 md:py-28 grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="container py-16 md:py-28 max-w-4xl mx-auto text-center">
           <div className="animate-fade-up">
             <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-card border border-border text-xs font-medium text-primary shadow-soft">
               <Sparkles className="w-3.5 h-3.5 text-accent" />
