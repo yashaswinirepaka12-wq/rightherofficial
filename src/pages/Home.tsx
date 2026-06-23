@@ -56,10 +56,10 @@ export default function Home() {
           <p className="text-lg text-muted-foreground leading-relaxed">
             RightHer is a space for honest writing on the things that shape young women's lives —
             from the classroom to the ballot box. We pair lived experience with real research, so you
-            can show up with confidence every day, all day. This is a platform and safe space for young
+            can show up with confidence every day, all day.&nbsp;This is a platform and safe space for young
             women to learn about their rights and how the law in the United States protects them, in simple, 
             straight-to-the-point language. Our founder is an aspiring legal professional who believes one of 
-            the most overlooked priorities for women is their legal literacy.
+            the most overlooked priorities for women is their legal literacy.&nbsp;
           </p>
         </div>
       </section>
