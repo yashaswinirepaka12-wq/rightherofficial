@@ -43,16 +43,6 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="relative animate-fade-in">
-            <div className="absolute -inset-6 bg-gold-gradient rounded-[2.5rem] blur-2xl opacity-30" aria-hidden />
-            <img
-              src={heroImg}
-              alt="Young woman looking upward, surrounded by florals and golden light"
-              width={1600}
-              height={1200}
-              className="relative rounded-[2rem] shadow-elegant w-full h-auto"
-            />
-          </div>
         </div>
       </section>
 
