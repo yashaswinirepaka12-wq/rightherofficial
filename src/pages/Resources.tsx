@@ -5,7 +5,7 @@ const sections = [
   {
     icon: Heart,
     title: "Mental Health Support",
-    blurb: "If you're struggling, you're not alone — and help is closer than you think.",
+    blurb: "If you're struggling, you're not alone, and help is closer than you think.",
     items: [
       { name: "988 Suicide & Crisis Lifeline", desc: "Free, confidential support, 24/7. Call or text 988.", url: "https://988lifeline.org" },
       { name: "Crisis Text Line", desc: "Text HOME to 741741 for free crisis support.", url: "https://www.crisistextline.org" },
@@ -15,7 +15,7 @@ const sections = [
   {
     icon: Vote,
     title: "Civic Education & Voting",
-    blurb: "Know your rights, register early, and bring a friend.",
+    blurb: "Know your rights, register early, and bring a friend!",
     items: [
       { name: "Vote.org", desc: "Register to vote, check your status, and find your polling place.", url: "https://vote.org" },
       { name: "iCivics", desc: "Interactive civic education built by Justice Sandra Day O'Connor.", url: "https://www.icivics.org" },
@@ -68,8 +68,8 @@ export default function Resources() {
           <p className="text-xs font-semibold uppercase tracking-widest text-accent mb-3">Resources</p>
           <h1 className="font-display text-5xl md:text-6xl font-semibold mb-4">Help, hand-picked.</h1>
           <p className="text-lg text-muted-foreground">
-            A working list of the organizations, hotlines, and tools we trust — for the moments
-            you need information fast, or support that actually shows up.
+            A working list of the organizations, hotlines, and tools we trust, for the moments
+            you need information fast or support that actually shows up.
           </p>
         </div>
       </section>
