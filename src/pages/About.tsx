@@ -44,13 +44,7 @@ export default function About() {
                 So I started asking — first my friends, then my classmates, then anyone who
                 would listen.
               </p>
-              <p>
-                Over the past few years, I've organized voter-registration drives, spoken at
-                local council meetings, mentored younger girls through public-speaking
-                workshops, and worked with community partners on educational-equity projects.
-                Each of those experiences taught me the same thing: when young women are given
-                information and space, they don't just participate — they lead.
-              </p>
+              <p>{"\n"}</p>
               <p>
                 RightHer is the project I wish I'd had at thirteen. It's a place to read honest
                 writing about the issues that shape our lives, find resources that actually
