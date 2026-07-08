@@ -52,24 +52,6 @@ export default function About() {
             </div>
           </div>
 
-          <aside className="lg:col-span-2">
-            <div className="rounded-3xl bg-soft-gradient border border-border p-8 shadow-soft sticky top-28">
-              <p className="text-xs font-semibold uppercase tracking-widest text-accent mb-3">In numbers</p>
-              <ul className="space-y-5">
-                {[
-                  ["4+", "years of advocacy work"],
-                  ["100+", "girls mentored"],
-                  ["12", "community partnerships"],
-                  ["1", "very loud notebook"],
-                ].map(([n, l]) => (
-                  <li key={l} className="flex items-baseline gap-4">
-                    <span className="font-display text-4xl font-semibold text-gradient">{n}</span>
-                    <span className="text-sm text-muted-foreground">{l}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </aside>
         </div>
       </section>
 
