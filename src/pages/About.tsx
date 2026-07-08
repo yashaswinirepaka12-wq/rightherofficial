@@ -22,7 +22,7 @@ export default function About() {
         <div className="container py-20 md:py-28 max-w-3xl">
           <p className="text-xs font-semibold uppercase tracking-widest text-accent mb-3">About</p>
           <h1 className="font-display text-5xl md:text-6xl font-semibold leading-[1.05] mb-6">
-            Started by a girl who refused to be talked over.
+            Started by two people who refused to be talked over.
           </h1>
           <p className="text-lg text-muted-foreground leading-relaxed">
             RightHer began as a notebook full of questions: Why don't we learn about menstrual
