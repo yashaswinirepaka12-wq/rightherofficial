@@ -22,7 +22,7 @@ export default function About() {
         <div className="container py-20 md:py-28 max-w-3xl">
           <p className="text-xs font-semibold uppercase tracking-widest text-accent mb-3">About</p>
           <h1 className="font-display text-5xl md:text-6xl font-semibold leading-[1.05] mb-6">
-            Started by two people who refused to be talked over.
+            Started by two girls who refused to be talked over.
           </h1>
           <p className="text-lg text-muted-foreground leading-relaxed">
             RightHer began as a notebook full of questions: Why don't we learn about menstrual
@@ -39,14 +39,14 @@ export default function About() {
             <h2 className="font-display text-3xl md:text-4xl font-semibold mb-6">The founder's story.</h2>
             <div className="prose prose-lg max-w-none text-muted-foreground leading-relaxed space-y-5">
               <p>
-                I'm a high school student, a debater, a volunteer, and someone who has spent a
-                lot of time in rooms where I felt like no one was listening.{" "}
+                We are high school student, debaters, volunteers, and people who have spent a
+                lot of time in rooms where we felt like no one was listening.{" "}
               </p>
               <p>{"\n"}</p>
               <p>
-                I founded RightHer to educate young women on their rights so they can thrive in
+                We founded RightHer to educate young women on their rights so they can thrive in
                 any atmosphere. This initiative helps build confidence because every girl
-                deserves to be seen and heard. This blog combines my love of writing and
+                deserves to be seen and heard. This blog combines our love of writing and
                 ambition to advocate for a voice for women!
               </p>
             </div>
@@ -74,7 +74,7 @@ export default function About() {
       </section>
 
       <section className="container pb-20">
-        <h2 className="font-display text-3xl md:text-4xl font-semibold mb-10 text-center">What I care about.</h2>
+        <h2 className="font-display text-3xl md:text-4xl font-semibold mb-10 text-center">What w care about.</h2>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {values.map((v) => (
             <div key={v.title} className="rounded-2xl bg-card border border-border p-6 hover:shadow-soft transition-smooth">
