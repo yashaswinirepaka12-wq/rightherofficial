@@ -56,7 +56,7 @@ export default function About() {
       </section>
 
       <section className="container pb-20">
-        <h2 className="font-display text-3xl md:text-4xl font-semibold mb-10 text-center">What w care about.</h2>
+        <h2 className="font-display text-3xl md:text-4xl font-semibold mb-10 text-center">What we care about.</h2>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {values.map((v) => (
             <div key={v.title} className="rounded-2xl bg-card border border-border p-6 hover:shadow-soft transition-smooth">
