@@ -63,13 +63,13 @@ export default function Contact() {
         </form>
 
         <aside className="lg:col-span-2 space-y-4">
-          <a href="mailto:hello@righther.org" className="flex items-start gap-4 p-6 rounded-2xl bg-soft-gradient border border-border hover:shadow-soft transition-smooth">
+          <a href="mailto:rightherofficial@gmail.com" className="flex items-start gap-4 p-6 rounded-2xl bg-soft-gradient border border-border hover:shadow-soft transition-smooth">
             <div className="w-10 h-10 rounded-full bg-card grid place-items-center text-primary shrink-0">
               <Mail className="w-4 h-4" />
             </div>
             <div>
               <p className="font-display text-lg font-semibold">Email</p>
-              <p className="text-sm text-muted-foreground">hello@righther.org</p>
+              <p className="text-sm text-muted-foreground">rightherofficial@gmail.com</p>
             </div>
           </a>
           <a href="#" className="flex items-start gap-4 p-6 rounded-2xl bg-soft-gradient border border-border hover:shadow-soft transition-smooth">
@@ -78,7 +78,7 @@ export default function Contact() {
             </div>
             <div>
               <p className="font-display text-lg font-semibold">Instagram</p>
-              <p className="text-sm text-muted-foreground">@righther</p>
+              <p className="text-sm text-muted-foreground">@rightherofficial</p>
             </div>
           </a>
           <a href="#" className="flex items-start gap-4 p-6 rounded-2xl bg-soft-gradient border border-border hover:shadow-soft transition-smooth">
