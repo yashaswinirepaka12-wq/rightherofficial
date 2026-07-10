@@ -138,7 +138,7 @@ export function Layout() {
               <a href="#" aria-label="Instagram" className="w-10 h-10 grid place-items-center rounded-full border border-border hover:bg-secondary transition-smooth">
                 <Instagram className="w-4 h-4" />
               </a>
-              <a href="mailto:hello@righther.org" aria-label="Email" className="w-10 h-10 grid place-items-center rounded-full border border-border hover:bg-secondary transition-smooth">
+              <a href="mailto:rightherofficial@gmail.com" aria-label="Email" className="w-10 h-10 grid place-items-center rounded-full border border-border hover:bg-secondary transition-smooth">
                 <Mail className="w-4 h-4" />
               </a>
             </div>
