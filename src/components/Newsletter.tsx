@@ -2,14 +2,49 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { toast } from "sonner";
-import { Mail } from "lucide-react";
+import { Mail, Loader2, CheckCircle } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
+
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 export function Newsletter({ compact = false }: { compact?: boolean }) {
   const [email, setEmail] = useState("");
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [errorMsg, setErrorMsg] = useState("");
 
-  const submit = (e: React.FormEvent) => {
+  const submit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!email) return;
+    const trimmed = email.trim();
+    if (!trimmed) {
+      setStatus("error");
+      setErrorMsg("Please enter your email.");
+      return;
+    }
+    if (!emailRegex.test(trimmed)) {
+      setStatus("error");
+      setErrorMsg("Please enter a valid email address.");
+      return;
+    }
+
+    setStatus("loading");
+    setErrorMsg("");
+
+    const { error } = await supabase.from("subscribers").insert({ email: trimmed });
+
+    if (error) {
+      if (error.code === "23505") {
+        setStatus("success");
+        toast.success("You're already on the list.", {
+          description: "We'll send the next RightHer Letter to your inbox.",
+        });
+      } else {
+        setStatus("error");
+        setErrorMsg("Something went wrong. Please try again.");
+      }
+      return;
+    }
+
+    setStatus("success");
     toast.success("You're in — welcome to RightHer.", {
       description: "Look out for our next letter in your inbox.",
     });
@@ -44,16 +79,38 @@ export function Newsletter({ compact = false }: { compact?: boolean }) {
             required
             placeholder="your@email.com"
             value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            onChange={(e) => {
+              setEmail(e.target.value);
+              if (status === "error") setStatus("idle");
+            }}
+            disabled={status === "loading" || status === "success"}
             className={compact ? "bg-background" : "bg-background text-foreground border-0 h-12"}
+            aria-invalid={status === "error"}
           />
           <Button
             type="submit"
+            disabled={status === "loading" || status === "success"}
             className={compact ? "" : "bg-accent text-accent-foreground hover:bg-accent/90 h-12 px-6 font-medium"}
           >
-            Subscribe
+            {status === "loading" ? (
+              <>
+                <Loader2 className="mr-1 w-4 h-4 animate-spin" /> Joining
+              </>
+            ) : status === "success" ? (
+              <>
+                <CheckCircle className="mr-1 w-4 h-4" /> Subscribed
+              </>
+            ) : (
+              "Subscribe"
+            )}
           </Button>
         </form>
+        {status === "error" && (
+          <p className="mt-2 text-sm text-red-500">{errorMsg}</p>
+        )}
+        {status === "success" && (
+          <p className="mt-2 text-sm text-green-600">Thanks for subscribing!</p>
+        )}
       </div>
     </section>
   );
