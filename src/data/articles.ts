@@ -103,7 +103,7 @@ export const articles: Article[] = [
       {
         type: "sources",
         items: [
-          "\"Title IX of the Education Amendments of 1972.\" U.S. Department of Education — www2.ed.gov/about/offices/list/ocr/docs/tix_dis.html",
+          "\"Title IX of the Education Amendments of 1972.\" U.S. Department of Education — www.ed.gov/laws-and-policy/civil-rights-laws/title-ix-and-sex-discrimination",
           "\"Fourteenth Amendment.\" Legal Information Institute, Cornell Law School — www.law.cornell.edu/constitution/amendmentxiv",
           "American Civil Liberties Union. \"Menstrual Equity in Schools.\" — www.aclu.org",
           "UNICEF. \"Guidance on Menstrual Health and Hygiene.\" — www.unicef.org",

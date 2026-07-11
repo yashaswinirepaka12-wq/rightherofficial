@@ -89,9 +89,27 @@ export default function Article() {
                   <div key={i} className="pt-6 mt-4 border-t border-border">
                     <h3 className="font-display text-xl font-semibold mb-4">Sources</h3>
                     <ul className="space-y-2 text-sm text-muted-foreground">
-                      {block.items.map((item, j) => (
-                        <li key={j}>{item}</li>
-                      ))}
+                      {block.items.map((item, j) => {
+                        const [label, urlPart] = item.split(" — ");
+                        const url = urlPart?.trim();
+                        const href = url && !/^https?:\/\//i.test(url) ? `https://${url}` : url;
+                        return (
+                          <li key={j}>
+                            {href ? (
+                              <a
+                                href={href}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="hover:text-primary underline underline-offset-2"
+                              >
+                                {label?.trim() || item}
+                              </a>
+                            ) : (
+                              item
+                            )}
+                          </li>
+                        );
+                      })}
                     </ul>
                   </div>
                 );
