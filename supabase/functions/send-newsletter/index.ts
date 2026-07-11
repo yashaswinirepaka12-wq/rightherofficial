@@ -21,7 +21,12 @@ interface RequestBody {
 const GATEWAY_URL = "https://connector-gateway.lovable.dev/google_mail";
 
 function base64urlEncode(str: string): string {
-  return btoa(str)
+  const bytes = new TextEncoder().encode(str);
+  let binary = "";
+  for (let i = 0; i < bytes.length; i++) {
+    binary += String.fromCharCode(bytes[i]);
+  }
+  return btoa(binary)
     .replace(/\+/g, "-")
     .replace(/\//g, "_")
     .replace(/=+$/, "");
