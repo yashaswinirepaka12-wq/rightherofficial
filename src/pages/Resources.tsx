@@ -48,7 +48,7 @@ const sections = [
     blurb: "Rights you have at school, at work, and at the doctor's office.",
     items: [
       { name: "ACLU Know Your Rights", desc: "Plain-language guides for students, protestors, and more.", url: "https://www.aclu.org/know-your-rights" },
-      { name: "Title IX Info", desc: "Your protections from sex discrimination in education.", url: "https://www.ed.gov/laws-and-policy/civil-rights-laws/title-ix" },
+      { name: "Title IX Info", desc: "Your protections from sex discrimination in education.", url: "https://www.ed.gov/laws-and-policy/civil-rights-laws/title-ix-and-sex-discrimination" },
       { name: "Period Equity", desc: "Advocacy and information on menstrual equity laws.", url: "https://www.periodequity.org" },
     ],
   },
