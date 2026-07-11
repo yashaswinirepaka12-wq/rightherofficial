@@ -43,10 +43,13 @@ function buildEmailHtml(
   unsubscribeUrl: string,
 ): string {
   const articleCards = articles
-    .map(
-      (article) => `
+    .map((article) => {
+      const imageUrl = article.image.startsWith("http")
+        ? article.image
+        : `${siteUrl}${article.image.startsWith("/") ? article.image : `/${article.image}`}`;
+      return `
         <div style="margin-bottom:32px;border-radius:12px;overflow:hidden;background:#f8fafc;border:1px solid #e2e8f0;">
-          <img src="${article.image}" alt="${escapeHtml(article.title)}" style="width:100%;height:auto;display:block;" />
+          <img src="${imageUrl}" alt="${escapeHtml(article.title)}" style="width:100%;height:auto;display:block;" />
           <div style="padding:20px;">
             <p style="margin:0 0 8px;font-size:12px;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;color:#64748b;">${escapeHtml(article.category)}</p>
             <h2 style="margin:0 0 12px;font-size:20px;font-weight:600;color:#0f172a;">${escapeHtml(article.title)}</h2>
@@ -54,8 +57,8 @@ function buildEmailHtml(
             <a href="${siteUrl}/blog/${article.slug}" style="display:inline-block;padding:10px 18px;background:#0f172a;color:#ffffff;text-decoration:none;border-radius:8px;font-size:14px;font-weight:500;">Read on the blog</a>
           </div>
         </div>
-      `,
-    )
+      `;
+    })
     .join("");
 
   return `
