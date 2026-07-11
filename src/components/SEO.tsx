@@ -4,9 +4,10 @@ interface SEOProps {
   title: string;
   description: string;
   path: string;
+  noIndex?: boolean;
 }
 
-export function SEO({ title, description, path }: SEOProps) {
+export function SEO({ title, description, path, noIndex }: SEOProps) {
   const fullTitle = title.includes("RightHer") ? title : `${title} | RightHer`;
   return (
     <Helmet>
@@ -17,6 +18,8 @@ export function SEO({ title, description, path }: SEOProps) {
       <meta property="og:description" content={description} />
       <meta property="og:url" content={path} />
       <meta property="og:type" content="website" />
+      {noIndex && <meta name="robots" content="noindex, nofollow" />}
     </Helmet>
   );
 }
+
