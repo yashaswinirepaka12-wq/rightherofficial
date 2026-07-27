@@ -12,6 +12,8 @@ import Resources from "./pages/Resources";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import AdminNewsletter from "./pages/AdminNewsletter";
+import AdminPanel from "./pages/AdminPanel";
+import PostPage from "./pages/Post";
 import Unsubscribe from "./pages/Unsubscribe";
 
 const queryClient = new QueryClient();
@@ -30,7 +32,9 @@ const App = () => (
             <Route path="/resources" element={<Resources />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/unsubscribe" element={<Unsubscribe />} />
+            <Route path="/posts/:slug" element={<PostPage />} />
             <Route path="/admin/newsletter" element={<AdminNewsletter />} />
+            <Route path="/admin-panel" element={<AdminPanel />} />
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
