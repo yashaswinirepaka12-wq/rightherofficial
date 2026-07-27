@@ -49,7 +49,7 @@ export const articles: Article[] = [
     image: article1,
     date: "June 16, 2026",
     readTime: "6 min read",
-    author: "The RightHer Editors",
+    author: "Yashaswini Repaka",
     featured: true,
     content: [
       {
@@ -124,7 +124,7 @@ export const articles: Article[] = [
     image: article2,
     date: "June 16, 2026",
     readTime: "6 min read",
-    author: "The RightHer Editors",
+    author: "Yashaswini Repaka",
     featured: true,
     content: [
       {
