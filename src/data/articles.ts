@@ -195,6 +195,17 @@ export const articles: Article[] = [
         type: "p",
         text: "Students and parents should stay informed about their rights and school policies. When concerns arise, addressing them calmly and clearly can lead to better outcomes for everyone involved.",
       },
+      {
+        type: "sources",
+        items: [
+          "\"Riley v. California, 573 U.S. 373 (2014).\" Legal Information Institute, Cornell Law School — www.law.cornell.edu/supremecourt/text/13-132",
+          "\"New Jersey v. T.L.O., 469 U.S. 325 (1985).\" Legal Information Institute, Cornell Law School — www.law.cornell.edu/supremecourt/text/469/325",
+          "American Civil Liberties Union. \"Know Your Rights: Students' Rights.\" — www.aclu.org/know-your-rights/students-rights",
+          "U.S. Department of Education. \"Family Educational Rights and Privacy Act (FERPA).\" — studentprivacy.ed.gov",
+          "National Association of Secondary School Principals. \"Cell Phones and Student Privacy.\" — www.nassp.org",
+          "Electronic Frontier Foundation. \"Student Privacy and Digital Rights.\" — www.eff.org/issues/student-privacy",
+        ],
+      },
     ],
   },
 ];
