@@ -1,14 +1,22 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, Quote, Sparkles } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Quote, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { SEO } from "@/components/SEO";
 import { Newsletter } from "@/components/Newsletter";
 import { ArticleCard } from "@/components/ArticleCard";
 import { articles } from "@/data/articles";
-import heroImg from "@/assets/hero.jpg";
+import { fetchLatestPosts, formatPostDate, estimateReadTime, type Post } from "@/lib/posts";
 
 export default function Home() {
-  const featured = articles.slice(0, 3);
+  const [posts, setPosts] = useState<Post[]>([]);
+  useEffect(() => {
+    fetchLatestPosts(3).then(setPosts).catch(() => setPosts([]));
+  }, []);
+
+  const staticFeatured = articles.slice(0, 3);
+  const hasDbPosts = posts.length > 0;
+  const featured = hasDbPosts ? [] : staticFeatured;
 
   return (
     <>
