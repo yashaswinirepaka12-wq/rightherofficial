@@ -72,8 +72,60 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Featured Articles */}
-      {featured.length > 0 && (
+      {/* Latest posts from database */}
+      {hasDbPosts && (
+        <section className="container pb-20 md:pb-28">
+          <div className="flex items-end justify-between mb-10">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-widest text-accent mb-2">Featured</p>
+              <h2 className="font-display text-3xl md:text-4xl font-semibold">Latest essays</h2>
+            </div>
+            <Link to="/blog" className="hidden sm:inline-flex items-center gap-1 text-sm font-medium text-primary hover:underline">
+              View all <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {posts.map((p) => (
+              <Link
+                key={p.id}
+                to={`/posts/${p.slug}`}
+                className="block group rounded-2xl overflow-hidden bg-card border border-border hover:border-primary/30 hover:shadow-elegant transition-smooth"
+              >
+                <div className="aspect-[16/10] overflow-hidden bg-secondary">
+                  {p.featured_image ? (
+                    <img
+                      src={p.featured_image}
+                      alt={p.title}
+                      loading="lazy"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-smooth"
+                    />
+                  ) : (
+                    <div className="w-full h-full bg-soft-gradient" />
+                  )}
+                </div>
+                <div className="p-6">
+                  <div className="flex items-center gap-3 text-xs text-muted-foreground mb-3">
+                    <span>{formatPostDate(p.publication_date)}</span>
+                    <span>·</span>
+                    <span>{estimateReadTime(p.content)}</span>
+                  </div>
+                  <h3 className="font-display text-2xl font-semibold leading-snug mb-2 group-hover:text-primary transition-smooth">
+                    {p.title}
+                  </h3>
+                  {p.summary && (
+                    <p className="text-sm text-muted-foreground leading-relaxed mb-4 line-clamp-3">{p.summary}</p>
+                  )}
+                  <span className="inline-flex items-center gap-1 text-sm font-medium text-primary">
+                    Read <ArrowUpRight className="w-3.5 h-3.5" />
+                  </span>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {!hasDbPosts && featured.length > 0 && (
         <section className="container pb-20 md:pb-28">
           <div className="flex items-end justify-between mb-10">
             <div>
