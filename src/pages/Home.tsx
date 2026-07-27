@@ -58,7 +58,7 @@ export default function Home() {
             from the classroom to the ballot box. We pair lived experience with real research, so you
             can show up with confidence every day, all day.&nbsp;This is a platform and safe space for young
             women to learn about their rights and how the law in the United States protects them, in simple, 
-            straight-to-the-point language. Our founder is an aspiring legal professional who believes one of 
+            straight-to-the-point language. Our founders are aspiring legal professionals who believe one of 
             the most overlooked priorities for women is their legal literacy.&nbsp;
           </p>
         </div>
