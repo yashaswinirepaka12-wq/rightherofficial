@@ -22,6 +22,7 @@ export type Database = {
           id: string
           publication_date: string
           slug: string
+          status: string
           summary: string | null
           title: string
           updated_at: string
@@ -33,6 +34,7 @@ export type Database = {
           id?: string
           publication_date?: string
           slug: string
+          status?: string
           summary?: string | null
           title: string
           updated_at?: string
@@ -44,6 +46,7 @@ export type Database = {
           id?: string
           publication_date?: string
           slug?: string
+          status?: string
           summary?: string | null
           title?: string
           updated_at?: string
