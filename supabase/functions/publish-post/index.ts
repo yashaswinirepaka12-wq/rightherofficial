@@ -13,6 +13,7 @@ interface RequestBody {
   summary?: string;
   content: string;
   featuredImage?: string;
+  status?: "draft" | "published";
 }
 
 function slugify(input: string): string {
@@ -32,7 +33,8 @@ Deno.serve(async (req) => {
 
   try {
     const body = (await req.json()) as RequestBody;
-    const { adminPassword, title, summary, content, featuredImage } = body;
+    const { adminPassword, title, summary, content, featuredImage, status } = body;
+    const postStatus = status === "published" ? "published" : "draft";
 
     if (!adminPassword || adminPassword !== Deno.env.get("NEWSLETTER_ADMIN_PASSWORD")) {
       return new Response(JSON.stringify({ error: "Unauthorized" }), {
@@ -81,6 +83,7 @@ Deno.serve(async (req) => {
         content: content.trim(),
         featured_image: featuredImage?.trim() || null,
         slug,
+        status: postStatus,
       })
       .select()
       .single();

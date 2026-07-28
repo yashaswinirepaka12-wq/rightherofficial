@@ -7,6 +7,7 @@ export interface Post {
   content: string;
   featured_image: string | null;
   slug: string;
+  status?: string;
   publication_date: string;
   created_at: string;
   updated_at: string;
@@ -16,6 +17,7 @@ export async function fetchLatestPosts(limit = 6): Promise<Post[]> {
   const { data, error } = await supabase
     .from("posts")
     .select("*")
+    .eq("status", "published")
     .order("publication_date", { ascending: false })
     .limit(limit);
   if (error) throw error;
@@ -27,6 +29,7 @@ export async function fetchPostBySlug(slug: string): Promise<Post | null> {
     .from("posts")
     .select("*")
     .eq("slug", slug)
+    .eq("status", "published")
     .maybeSingle();
   if (error) throw error;
   return (data as Post) ?? null;
