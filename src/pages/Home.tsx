@@ -78,7 +78,7 @@ export default function Home() {
           <div className="flex items-end justify-between mb-10">
             <div>
               <p className="text-xs font-semibold uppercase tracking-widest text-accent mb-2">Featured</p>
-              <h2 className="font-display text-3xl md:text-4xl font-semibold">Latest essays</h2>
+              <h2 className="font-display text-3xl md:text-4xl font-semibold">Latest articles</h2>
             </div>
             <Link to="/blog" className="hidden sm:inline-flex items-center gap-1 text-sm font-medium text-primary hover:underline">
               View all <ArrowRight className="w-4 h-4" />
@@ -130,7 +130,7 @@ export default function Home() {
           <div className="flex items-end justify-between mb-10">
             <div>
               <p className="text-xs font-semibold uppercase tracking-widest text-accent mb-2">Featured</p>
-              <h2 className="font-display text-3xl md:text-4xl font-semibold">Latest essays</h2>
+              <h2 className="font-display text-3xl md:text-4xl font-semibold">Latest articles</h2>
             </div>
             <Link to="/blog" className="hidden sm:inline-flex items-center gap-1 text-sm font-medium text-primary hover:underline">
               View all <ArrowRight className="w-4 h-4" />
