@@ -121,10 +121,13 @@ function createRawEmail(
     throw new Error("Invalid recipient email");
   }
   const safeSubject = subject.replace(/[\r\n]+/g, " ");
+  const encodedSubject = /[^\x20-\x7E]/.test(safeSubject)
+    ? `=?UTF-8?B?${btoa(String.fromCharCode(...new TextEncoder().encode(safeSubject)))}?=`
+    : safeSubject;
   const email = [
     `To: ${to}`,
     `From: ${from}`,
-    `Subject: ${safeSubject}`,
+    `Subject: ${encodedSubject}`,
     "Content-Type: text/html; charset=\"UTF-8\"",
     "MIME-Version: 1.0",
     "",
