@@ -105,16 +105,26 @@ function buildEmailHtml(
   `;
 }
 
+const EMAIL_RE = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+
+function isSafeEmail(v: string): boolean {
+  return typeof v === "string" && v.length <= 254 && !/[\r\n]/.test(v) && EMAIL_RE.test(v);
+}
+
 function createRawEmail(
   to: string,
   from: string,
   subject: string,
   html: string,
 ): string {
+  if (!isSafeEmail(to)) {
+    throw new Error("Invalid recipient email");
+  }
+  const safeSubject = subject.replace(/[\r\n]+/g, " ");
   const email = [
     `To: ${to}`,
     `From: ${from}`,
-    `Subject: ${subject}`,
+    `Subject: ${safeSubject}`,
     "Content-Type: text/html; charset=\"UTF-8\"",
     "MIME-Version: 1.0",
     "",
