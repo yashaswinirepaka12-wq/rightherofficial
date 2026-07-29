@@ -66,7 +66,9 @@ export default function AdminNewsletter() {
             slug: a.slug,
             title: a.title,
             excerpt: a.excerpt,
-            image: a.image,
+            image: /^https?:\/\//i.test(a.image)
+              ? a.image
+              : new URL(a.image, window.location.origin).href,
             category: a.category,
             date: a.date,
             readTime: a.readTime,
