@@ -88,7 +88,7 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
-      unsubscribe_by_token: { Args: { p_token: string }; Returns: boolean }
+      [_ in never]: never
     }
     Enums: {
       [_ in never]: never

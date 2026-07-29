@@ -18,10 +18,10 @@ export default function Unsubscribe() {
 
     const run = async () => {
       try {
-        const { data, error } = await supabase.rpc("unsubscribe_by_token", {
-          p_token: token,
+        const { data, error } = await supabase.functions.invoke("unsubscribe", {
+          body: { token },
         });
-        if (error || !data) {
+        if (error || !data?.success) {
           setStatus("error");
         } else {
           setStatus("success");
