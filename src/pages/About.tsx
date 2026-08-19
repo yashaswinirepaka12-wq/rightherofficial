@@ -36,7 +36,7 @@ export default function About() {
       <section className="container py-20 md:py-24">
         <div className="grid lg:grid-cols-5 gap-12 lg:gap-16">
           <div className="lg:col-span-3">
-            <h2 className="font-display text-3xl md:text-4xl font-semibold mb-6">The founder's story.</h2>
+            <h2 className="font-display text-3xl md:text-4xl font-semibold mb-6">The founders' story.</h2>
             <div className="prose prose-lg max-w-none text-muted-foreground leading-relaxed space-y-5">
               <p>
                 We are high school student, debaters, volunteers, and people who have spent a
