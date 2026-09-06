@@ -3,7 +3,6 @@ import { Link, useParams } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
 import { ArrowLeft, Loader2 } from "lucide-react";
 import { SEO } from "@/components/SEO";
-import { Newsletter } from "@/components/Newsletter";
 import { fetchPostBySlug, formatPostDate, estimateReadTime, type Post } from "@/lib/posts";
 import NotFound from "./NotFound";
 
@@ -101,8 +100,6 @@ export default function PostPage() {
           </div>
         </div>
       </article>
-
-      <Newsletter />
     </>
   );
 }
