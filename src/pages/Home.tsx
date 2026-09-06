@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { ArrowRight, ArrowUpRight, Quote, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { SEO } from "@/components/SEO";
-import { Newsletter } from "@/components/Newsletter";
 import { ArticleCard } from "@/components/ArticleCard";
 import { articles } from "@/data/articles";
 import { fetchLatestPosts, formatPostDate, estimateReadTime, type Post } from "@/lib/posts";
@@ -156,10 +155,6 @@ export default function Home() {
         </figure>
       </section>
 
-      {/* Newsletter */}
-      <section className="container pb-24">
-        <Newsletter />
-      </section>
     </>
   );
 }

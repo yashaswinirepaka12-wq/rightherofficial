@@ -2,7 +2,6 @@ import { Link, useParams } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { articles } from "@/data/articles";
 import { SEO } from "@/components/SEO";
-import { Newsletter } from "@/components/Newsletter";
 import { ArticleCard } from "@/components/ArticleCard";
 import NotFound from "./NotFound";
 
@@ -142,8 +141,6 @@ export default function Article() {
           </div>
         </div>
       </section>
-
-      <Newsletter />
     </>
   );
 }

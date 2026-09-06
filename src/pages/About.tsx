@@ -1,5 +1,4 @@
 import { SEO } from "@/components/SEO";
-import { Newsletter } from "@/components/Newsletter";
 import { Mic, Heart, Users, Vote } from "lucide-react";
 
 const values = [
@@ -71,7 +70,6 @@ export default function About() {
       </section>
 
       <section className="container pb-24">
-        <Newsletter />
       </section>
     </>
   );
