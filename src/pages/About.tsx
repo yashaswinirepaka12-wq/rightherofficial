@@ -38,7 +38,7 @@ export default function About() {
             <h2 className="font-display text-3xl md:text-4xl font-semibold mb-6">The founders' story.</h2>
             <div className="prose prose-lg max-w-none text-muted-foreground leading-relaxed space-y-5">
               <p>
-                We are high school student, debaters, volunteers, and people who have spent a
+                We are high school students, debaters, volunteers, and people who have spent a
                 lot of time in rooms where we felt like no one was listening.{" "}
               </p>
               <p>{"\n"}</p>
